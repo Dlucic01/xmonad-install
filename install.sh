@@ -7,7 +7,7 @@ cd ~
 #############
 sudo pacman -Syu
 
-sudo pacman -Syy --noconfirm xorg xmonad xmonad-contrib picom nitrogen rofi konsole vlc cmatrix sl curl cmus fceux telegram-desktop neofetch zathura
+sudo pacman -Syy --noconfirm xorg xmonad xmonad-contrib picom nitrogen rofi konsole vlc cmatrix sl curl cmus fceux telegram-desktop neofetch zathura cowsay
 
 # Install 1.2 - Create directories
 
@@ -21,8 +21,9 @@ mkdir zathura
 
 # Install 1.3 - Fonts
 
-cd xmonad-install 
-sudo cp fonts /usr/local/share/
+cd ~/xmonad-install 
+
+sudo cp -r fonts /usr/local/share
 
 fc-cache
 
@@ -39,10 +40,10 @@ cp xmobarrc0 ~/.config/xmobar
 
 cd ~/xmonad-install
 
-cp dotvim ~/\.vim
-cp vimrc ~/\.vimrc
+cp -r dotvim ~/\.vim
+cp -r vimrc ~/\.vimrc
 
-cp rofi ~/.config/
+cp -r rofi ~/.config/
 
 cp zathurarc ~/.config/zathura/
 
@@ -55,6 +56,5 @@ cp default.profile ~/.local/share/konsole
 cd ~
 sudo pacman -Syu
 
-echo "#############################"
-echo "### Installation Complete ###"
-echo "#############################"
+konsole -e curl parrot.live 
+cowsay Installation Complete
