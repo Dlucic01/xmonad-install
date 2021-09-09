@@ -31,24 +31,24 @@ fc-cache
 
 cd ~
 cd xmonad-install
-mv xmonad.hs ~/.xmonad
-mv xmobarrc0 ~/.config/xmobar
+cp xmonad.hs ~/.xmonad
+cp xmobarrc0 ~/.config/xmobar
 
 
 # Install 1.5 - vim, rofi, zathura, bash aliases & konsole profile
 
 cd ~/xmonad-install
 
-mv dotvim ~/\.vim
-mv vimrc ~/\.vimrc
+cp dotvim ~/\.vim
+cp vimrc ~/\.vimrc
 
-mv rofi ~/.config/
+cp rofi ~/.config/
 
-mv zathurarc ~/.config/zathura/
+cp zathurarc ~/.config/zathura/
 
-mv bashrc ~/\.bashrc
+cp bashrc ~/\.bashrc
 
-mv default.profile ~/.local/share/konsole
+cp default.profile ~/.local/share/konsole
 
 
 # Complete
