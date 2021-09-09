@@ -5,6 +5,7 @@ cd ~
 #############
 # Install 1 #
 #############
+sudo pacman -Syu
 
 sudo pacman -Syy --noconfirm xorg xmonad xmonad-contrib picom nitrogen rofi konsole vlc cmatrix sl curl cmus fceux telegram-desktop neofetch zathura
 
@@ -49,7 +50,10 @@ mv bashrc ~/\.bashrc
 
 mv default.profile ~/.local/share/konsole
 
+
 # Complete
+cd ~
+sudo pacman -Syu
 
 echo "#############################"
 echo "### Installation Complete ###"
