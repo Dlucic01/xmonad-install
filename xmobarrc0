@@ -1,0 +1,32 @@
+Config {  font    = "xft:SpaceMono Nerd Font:pixelsize=16:antialias=true:hinting=true"
+       , additionalFonts = [  "xft:SpaceMono Nerd Font:size=12"] 
+
+       , bgColor = "#000000"
+       , fgColor = "#04d9ff"
+       , alpha = 255  
+       , position = Static { xpos = 1920, ypos = 0, width = 1920, height = 28} 
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = True
+       , hideOnStart = False
+       , iconRoot = "/home/archie/.xmonad/xpm"  -- default: "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ Run Date "[ %H:%M:%S ]" "date" 10
+                    , Run Volume "default" "Master"
+                        [ "-t", "<status>", "--"
+                        , "--on", "<fc=#04d9ff><fn=1>\xf028</fn> <volume>%</fc>"
+                        , "--onc", "#04d9ff"
+                       ] 1 
+                    , Run Battery [ "-t", "<fn=1></fn> <left>%" ] 60
+                    , Run UnsafeStdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %UnsafeStdinReader% } { %default:Master% | %battery%  <fn=1><fc=#04d9ff>%date%</fc></fn>" 
+
+}
+
+
