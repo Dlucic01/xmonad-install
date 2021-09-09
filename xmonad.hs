@@ -99,7 +99,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_Return), spawn "rofi -show drun")
 
     -- launch brave
-    , ((modm .|. shiftMask, xK_f     ), spawn "brave")
+    , ((modm .|. shiftMask, xK_f     ), spawn "firefox")
 
     -- launch file manager
     , ((modm,               xK_f     ), spawn "thunar .")
