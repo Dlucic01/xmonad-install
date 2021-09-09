@@ -287,7 +287,7 @@ myStartupHook = do
 -- Run xmonad with the settings specified.
 --
 main = do
-   xmproc0 <- spawnPipe "xmobar -x 0 /home/archie/.config/.xmobar/xmobarrc0"
+   xmproc0 <- spawnPipe "xmobar -x 0 /home/$USER/.config/.xmobar/xmobarrc0"
 
    xmonad $ docks def {
 
